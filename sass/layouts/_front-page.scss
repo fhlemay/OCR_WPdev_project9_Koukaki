@@ -1,5 +1,6 @@
 .banner {
   background-image: url("./assets/images/banner.png");
+  border: 2px solid red;
   min-height: 806px;
   background-size: cover;
   display: flex;
@@ -138,7 +139,7 @@
   }
 }
 
-@media all and(max-width: #{$breakpoint__laptop}) {
+@media all and (max-width: #{$breakpoint__laptop}) {
   .story {
     &__article {
       &::before {
@@ -153,7 +154,7 @@
   }
 }
 
-@media all and(max-width: #{$breakpoint__tablet}) {
+@media all and (max-width: #{$breakpoint__tablet}) {
   .story {
     &__article {
       &::before {
@@ -174,7 +175,7 @@
   }
 }
 
-@media all and(max-width: #{$breakpoint__small_tablet}) {
+@media all and (max-width: #{$breakpoint__small_tablet}) {
   .story {
     h2{
       &::before {
