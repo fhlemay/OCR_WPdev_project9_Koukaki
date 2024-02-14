@@ -9,3 +9,12 @@
  */
 
 @import "layouts/front-page.scss";
+
+.site-footer {
+	display: block;
+}
+
+.site-footer::after {
+  top: 0em;
+}
+
