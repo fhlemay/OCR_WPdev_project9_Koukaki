@@ -2,9 +2,6 @@
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-    // Style pour la section temporaire de la mise en nomination aux Oscars
-    // Est-ce possible de la lier avec le template part?
-    wp_enqueue_style('oscars-nomination-style', get_stylesheet_directory_uri() . '/parts/oscars-nomination/style.css' );
 }
 
 // Get customizer options form parent theme
