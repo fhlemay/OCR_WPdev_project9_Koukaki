@@ -12,4 +12,39 @@
   border: 2px solid red;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.story h2::after {
+  line-height: 0;
+  animation: rotate 20s infinite linear;
+}
+.story__article::after {
+  line-height: 0;
+  animation: rotate 20s infinite linear;
+}
+
+#studio h2::before {
+  line-height: 0;
+  animation: rotate 20s infinite linear;
+}
+#studio h2::after {
+  line-height: 0;
+  animation: rotate 20s infinite linear;
+}
+
+.site-footer::before {
+  line-height: 0;
+  animation: rotate 20s infinite linear;
+}
+.site-footer::after {
+  line-height: 0;
+  animation: rotate 20s infinite linear;
+}
+
 /*# sourceMappingURL=style.css.map */

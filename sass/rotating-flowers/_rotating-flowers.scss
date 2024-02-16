@@ -1,0 +1,50 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);  
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.story {
+  h2{
+    &::after {
+      line-height: 0; // line-height du parent déséquilibre le carré
+      animation: rotate 20s infinite linear;
+    }
+  }
+
+  &__article {
+    &::after {
+      line-height: 0; // line-height du parent déséquilibre le carré
+      animation: rotate 20s infinite linear;
+    }
+  } 
+}
+
+#studio {
+  h2{
+    &::before {
+      line-height: 0; // line-height du parent déséquilibre le carré
+      animation: rotate 20s infinite linear;
+    }
+    &::after {
+      line-height: 0; // line-height du parent déséquilibre le carré
+      animation: rotate 20s infinite linear;
+    }
+  }
+}
+
+.site-footer {
+    &::before {
+      line-height: 0; // line-height du parent déséquilibre le carré
+      animation: rotate 20s infinite linear;
+    }
+
+    &::after {
+      line-height: 0; // line-height du parent déséquilibre le carré
+      animation: rotate 20s infinite linear;
+  } 
+}
+
