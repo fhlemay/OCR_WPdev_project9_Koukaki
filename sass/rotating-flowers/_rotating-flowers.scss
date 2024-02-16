@@ -7,18 +7,24 @@
   }
 }
 
+$rotation-time: 20s;
+
+
+@mixin rotate-flower() {
+  line-height: 0; //  line-height du parent peut déséquilibrer la symétrie
+  animation: rotate $rotation-time infinite linear;
+}
+
 .story {
   h2{
     &::after {
-      line-height: 0; // line-height du parent déséquilibre le carré
-      animation: rotate 20s infinite linear;
+      @include rotate-flower();
     }
   }
 
   &__article {
     &::after {
-      line-height: 0; // line-height du parent déséquilibre le carré
-      animation: rotate 20s infinite linear;
+      @include rotate-flower();
     }
   } 
 }
@@ -26,25 +32,21 @@
 #studio {
   h2{
     &::before {
-      line-height: 0; // line-height du parent déséquilibre le carré
-      animation: rotate 20s infinite linear;
+      @include rotate-flower();
     }
     &::after {
-      line-height: 0; // line-height du parent déséquilibre le carré
-      animation: rotate 20s infinite linear;
+      @include rotate-flower();
     }
   }
 }
 
 .site-footer {
     &::before {
-      line-height: 0; // line-height du parent déséquilibre le carré
-      animation: rotate 20s infinite linear;
+      @include rotate-flower();
     }
 
     &::after {
-      line-height: 0; // line-height du parent déséquilibre le carré
-      animation: rotate 20s infinite linear;
+      @include rotate-flower();
   } 
 }
 
