@@ -7,12 +7,9 @@
   }
 }
 
-$rotation-time: 20s;
-
-
 @mixin rotate-flower() {
   line-height: 0; //  line-height du parent peut déséquilibrer la symétrie
-  animation: rotate $rotation-time infinite linear;
+  animation: rotate 20s infinite linear;
 }
 
 .story {
