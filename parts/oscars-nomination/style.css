@@ -1,0 +1,21 @@
+#oscars-nomination {
+  display: flex;
+  justify-content: center;
+  margin-top: -10rem;
+  margin-bottom: 20rem;
+}
+
+#oscars-nomination img {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 3rem;
+}
+
+#oscars-nomination h2 {
+  background: url('./images/orange_oscars_nomination_bg.png');
+  font-size: 3rem;
+  line-height: 3.786rem;
+  text-align: left;
+  padding: 4rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} 
