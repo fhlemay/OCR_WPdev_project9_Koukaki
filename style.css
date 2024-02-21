@@ -1,55 +1,17 @@
-@charset "UTF-8";
-/*
- Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
- Theme URI: https://www.koukaki.local
- Author: Studio Koukaki
- Author URI: https://www.koukaki.local
- Template: foce
- Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
- Version: 0.1
- */
-.banner {
-  border: 2px solid red;
-}
+/* Error: expected "{".
+ *    ,
+ * 13 | @import "rotating-flowers/rotating-flowers";
+ *    |                                            ^
+ *    '
+ *   style.scss 13:44  root stylesheet */
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.story h2::after {
-  line-height: 0;
-  animation: rotate 20s infinite linear;
-}
-.story__article::after {
-  line-height: 0;
-  animation: rotate 20s infinite linear;
-}
-
-#studio h2::before {
-  line-height: 0;
-  animation: rotate 20s infinite linear;
-}
-#studio h2::after {
-  line-height: 0;
-  animation: rotate 20s infinite linear;
-}
-
-.site-footer {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a    \2577 \a 13 \2502  @import "rotating-flowers/rotating-flowers";\a    \2502                                             ^\a    \2575 \a   style.scss 13:44  root stylesheet';
 }
-.site-footer::before {
-  line-height: 0;
-  animation: rotate 20s infinite linear;
-}
-.site-footer::after {
-  bottom: initial;
-  top: 0;
-  line-height: 0;
-  animation: rotate 20s infinite linear;
-}
-
-/*# sourceMappingURL=style.css.map */
