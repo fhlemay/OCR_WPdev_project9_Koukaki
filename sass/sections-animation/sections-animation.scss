@@ -1,0 +1,9 @@
+section {
+    opacity: 0; // initially invisible 
+    transition: opacity 3s ease; 
+
+    &.is-visible {
+      opacity: 1; // make it visible 
+    }
+}
+
