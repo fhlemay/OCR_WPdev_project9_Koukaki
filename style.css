@@ -38,11 +38,16 @@
   animation: rotate 20s infinite linear;
 }
 
+.site-footer {
+  display: block;
+}
 .site-footer::before {
   line-height: 0;
   animation: rotate 20s infinite linear;
 }
 .site-footer::after {
+  bottom: initial;
+  top: 0;
   line-height: 0;
   animation: rotate 20s infinite linear;
 }

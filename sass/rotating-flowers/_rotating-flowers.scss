@@ -38,12 +38,14 @@
 }
 
 .site-footer {
+    display: block;
     &::before {
       @include rotate-flower();
     }
 
     &::after {
+      bottom: initial;
+      top: 0; 
       @include rotate-flower();
   } 
 }
-
