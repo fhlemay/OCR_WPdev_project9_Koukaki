@@ -1,0 +1,14 @@
+h2 {
+  span {
+    display: inline-block; // to be able to move it around
+    opacity: 0; // initially invisible 
+    transform: translateY(100%); // move to bottom  
+    transition: opacity 2s ease, transform 0.5s ease; 
+
+    &.is-visible {
+      opacity: 1; // make it visible 
+      transform: translateY(0); // move to is initial position 
+    }
+  }
+}
+

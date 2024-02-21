@@ -12,4 +12,15 @@
   border: 2px solid red;
 }
 
+h2 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 2s ease, transform 0.5s ease;
+}
+h2 span.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*# sourceMappingURL=style.css.map */
