@@ -1,0 +1,49 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);  
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin rotate-flower() {
+  line-height: 0; //  line-height du parent peut déséquilibrer la symétrie
+  animation: rotate 20s infinite linear;
+}
+
+.story {
+  h2{
+    &::after {
+      @include rotate-flower();
+    }
+  }
+
+  &__article {
+    &::after {
+      @include rotate-flower();
+    }
+  } 
+}
+
+#studio {
+  h2{
+    &::before {
+      @include rotate-flower();
+    }
+    &::after {
+      @include rotate-flower();
+    }
+  }
+}
+
+.site-footer {
+    &::before {
+      @include rotate-flower();
+    }
+
+    &::after {
+      @include rotate-flower();
+  } 
+}
+
