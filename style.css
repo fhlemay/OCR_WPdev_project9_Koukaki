@@ -8,14 +8,10 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
-.banner {
-  border: 2px solid red;
-}
-
 h2 span {
   display: inline-block;
   transform: translateY(100%);
-  transition: opacity 2s ease, transform 0.7s ease;
+  transition: opacity 2.5s ease, transform 0.7s ease;
 }
 h2 span.is-visible {
   transform: translateY(0);
