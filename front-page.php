@@ -5,7 +5,7 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
-    <?php get_template_part( 'parts/banner-video/banner-video' ); ?>
+            <?php get_template_part( 'parts/banner-video/banner-video' ); ?>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
         <section id="#story" class="story">

@@ -1,21 +1,17 @@
-/* #oscars-nomination { */
-/*   display: flex; */
-/*   justify-content: center; */
-/*   margin-top: -10rem; */
-/*   margin-bottom: 20rem; */
-/* } */
-/**/
-/* #oscars-nomination img { */
-/*   width: fit-content; */
-/*   height: fit-content; */
-/*   margin-top: 3rem; */
-/* } */
-/**/
-/* #oscars-nomination h3 { */
-/*   background: url('./images/orange_oscars_nomination_bg.png'); */
-/*   font-size: 3rem; */
-/*   line-height: 3.786rem; */
-/*   text-align: left; */
-/*   padding: 4rem; */
-/*   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-/* }  */
+.banner {
+  position: relative;
+}
+
+.banner img {
+  position: absolute;
+  z-index: 1;
+}
+
+/* Thème parent semble désigner un device mobile sous les 1192px.
+ * On n'affiche pas la vidéo si en version mobile  
+ */
+@media all and (max-width: 1192px) {
+  #banner-video  {
+    display : none;
+  }
+}
