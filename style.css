@@ -59,10 +59,24 @@ h2 span.is-visible {
 
 section {
   opacity: 0;
-  transition: opacity 3s ease;
+  transition: opacity 2s ease;
 }
 section.is-visible {
   opacity: 1;
+}
+section:not(.banner) {
+  transition: transform 2s;
+  transform: translateY(100px);
+}
+section:not(.banner).slideUp {
+  transform: translateY(0);
+}
+section:not(.banner) p {
+  transform: translateY(-100px);
+  transition: transform 2s;
+}
+section:not(.banner) p.slideDown {
+  transform: translateY(0);
 }
 
 @keyframes bump {
