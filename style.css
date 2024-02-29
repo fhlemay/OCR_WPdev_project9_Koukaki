@@ -59,10 +59,24 @@ h2 span.is-visible {
 
 section {
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 3s ease;
 }
 section.is-visible {
   opacity: 1;
+}
+section.banner {
+  transform: translateY(-100px);
+  transition: transform 2s;
+}
+section.banner.slideDownBanner {
+  transform: translateY(0);
+}
+section.banner img {
+  transform: translateY(200px);
+  transition: transform 3s;
+}
+section.banner img.slideUpImage {
+  transform: translateY(0);
 }
 section:not(.banner) {
   transition: transform 2s;
@@ -111,7 +125,7 @@ section:not(.banner) p.slideDown {
     transform: translate(-10px, 5px);
   }
 }
-.banner img {
+.floatingAround {
   animation: bump 8s infinite linear;
 }
 

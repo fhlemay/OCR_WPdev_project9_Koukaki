@@ -1,29 +1,29 @@
 section {
   opacity: 0; // initially invisible 
-  transition: opacity 2s ease;
+  transition: opacity 3s ease;
 
   &.is-visible {
     opacity: 1; // make it visible 
   }
 
-  // &.banner {
-  //   transform: translateY(-100px); // initial position
-  //   transition: transform 2s;
-  //
-  //   &.slideDownBanner {
-  //     transform: translateY(0);
-  //   }
-  //
-  //   img {
-  //     transform: translateY(300px);
-  //     transition: transform 3s;
-  //
-  //
-  //     &.slideUpImage {
-  //       transform: translateY(0);
-  //     }
-  //   }
-  // }
+  &.banner {
+    transform: translateY(-100px); // initial position
+    transition: transform 2s;
+
+    &.slideDownBanner {
+      transform: translateY(0);
+    }
+
+    img {
+      transform: translateY(200px);
+      transition: transform 3s;
+
+
+      &.slideUpImage {
+        transform: translateY(0);
+      }
+    }
+  }
 
   &:not(.banner) {
     transition: transform 2s;
