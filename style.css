@@ -57,40 +57,25 @@ h2 span.is-visible {
   animation: rotate 20s infinite linear;
 }
 
-section {
+.section {
+  position: relative;
   opacity: 0;
-  transition: opacity 3s ease;
+  bottom: -200px;
+  transition: opacity 5s ease, bottom 3s;
 }
-section.is-visible {
+.section--is-visible {
   opacity: 1;
 }
-section.banner {
-  transform: translateY(-100px);
-  transition: transform 2s;
+.section--slide-up {
+  bottom: 0px;
 }
-section.banner.slideDownBanner {
-  transform: translateY(0);
+.section__text {
+  position: relative;
+  bottom: 200px;
+  transition: bottom 3s;
 }
-section.banner img {
-  transform: translateY(200px);
-  transition: transform 3s;
-}
-section.banner img.slideUpImage {
-  transform: translateY(0);
-}
-section:not(.banner) {
-  transition: transform 2s;
-  transform: translateY(100px);
-}
-section:not(.banner).slideUp {
-  transform: translateY(0);
-}
-section:not(.banner) p {
-  transform: translateY(-100px);
-  transition: transform 2s;
-}
-section:not(.banner) p.slideDown {
-  transform: translateY(0);
+.section__text--slide-down {
+  bottom: 0px;
 }
 
 @keyframes bump {

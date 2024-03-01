@@ -1,45 +1,29 @@
-section {
-  opacity: 0; // initially invisible 
-  transition: opacity 3s ease;
+$translation-speed: 3s;
+$translation-distance: 200px;
 
-  &.is-visible {
+.section {
+  position: relative;
+  opacity: 0; // initially invisible 
+  bottom: 0 - $translation-distance; // initial position (down)
+  transition: opacity 5s ease, bottom $translation-speed;
+
+  &--is-visible {
     opacity: 1; // make it visible 
   }
 
-  &.banner {
-    transform: translateY(-100px); // initial position
-    transition: transform 2s;
-
-    &.slideDownBanner {
-      transform: translateY(0);
-    }
-
-    img {
-      transform: translateY(200px);
-      transition: transform 3s;
-
-
-      &.slideUpImage {
-        transform: translateY(0);
-      }
-    }
+  &--slide-up {
+    bottom: 0px; // slide to his actual position;
   }
 
-  &:not(.banner) {
-    transition: transform 2s;
-    transform: translateY(100px); // initial position
+  // To stick the text position within is translating container :
+  // counter-translate at the same speed.
+  &__text {
+    position: relative;
+    bottom: $translation-distance; // initial position (up) 
+    transition: bottom $translation-speed;
 
-    &.slideUp {
-      transform: translateY(0);
-    }
-
-    p {
-      transform: translateY(-100px); // initial position
-      transition: transform 2s;
-
-      &.slideDown {
-        transform: translateY(0);
-      }
+    &--slide-down {
+      bottom: 0px; // slide to his actual position 
     }
   }
 }
