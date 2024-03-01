@@ -1,0 +1,72 @@
+$translation-speed: 2s;
+$translation-distance: 200px;
+
+.banner {
+  opacity: 0;
+  bottom: $translation-distance;
+  transition: bottom $translation-speed, opacity $translation-speed;
+
+  &--slide-down {
+    opacity: 1;
+    bottom: 0px;
+  }
+
+  &__logo {
+    transform: translateY($translation-distance + 100); // the distance is relative
+    transition: transform $translation-speed;
+
+    &--slide-up {
+      // bottom: 0px;
+      transform: translateY(0);
+    }
+
+    &--floating {
+      animation: floating 8s infinite linear;
+    }
+  }
+}
+
+
+@keyframes floating {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(10px, 5px);
+  }
+
+  20% {
+    transform: translate(-5px, 10px);
+  }
+
+  30% {
+    transform: translate(-10px, 5px);
+  }
+
+  40% {
+    transform: translate(-10px, -10px);
+  }
+
+  50% {
+    transform: translate(5px, -5px);
+  }
+
+  60% {
+    transform: translate(5px, -10px);
+  }
+
+  70% {
+    transform: translate(10px, -5px);
+  }
+
+  80% {
+    transform: translate(-5px, 0);
+  }
+
+  90% {
+    transform: translate(-10px, 5px);
+  }
+}

@@ -10,7 +10,7 @@
  */
 h2 span {
   display: inline-block;
-  transform: translateY(100%);
+  transform: translateY(125%);
   transition: opacity 2.5s ease, transform 0.7s ease;
 }
 h2 span.is-visible {
@@ -61,7 +61,7 @@ h2 span.is-visible {
   position: relative;
   opacity: 0;
   bottom: -200px;
-  transition: opacity 5s ease, bottom 3s;
+  transition: opacity 2s ease, bottom 2s;
 }
 .section--is-visible {
   opacity: 1;
@@ -72,13 +72,33 @@ h2 span.is-visible {
 .section__text {
   position: relative;
   bottom: 200px;
-  transition: bottom 3s;
+  transition: bottom 2s;
 }
 .section__text--slide-down {
   bottom: 0px;
 }
 
-@keyframes bump {
+.banner {
+  opacity: 0;
+  bottom: 200px;
+  transition: bottom 2s, opacity 2s;
+}
+.banner--slide-down {
+  opacity: 1;
+  bottom: 0px;
+}
+.banner__logo {
+  transform: translateY(300px);
+  transition: transform 2s;
+}
+.banner__logo--slide-up {
+  transform: translateY(0);
+}
+.banner__logo--floating {
+  animation: floating 8s infinite linear;
+}
+
+@keyframes floating {
   0%, 100% {
     transform: translate(0, 0);
   }
@@ -109,9 +129,6 @@ h2 span.is-visible {
   90% {
     transform: translate(-10px, 5px);
   }
-}
-.floatingAround {
-  animation: bump 8s infinite linear;
 }
 
 /*# sourceMappingURL=style.css.map */
