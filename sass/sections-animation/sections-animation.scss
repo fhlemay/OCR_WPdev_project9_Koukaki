@@ -1,11 +1,11 @@
-$translation-speed: 3s;
+$translation-speed: 2s;
 $translation-distance: 200px;
 
 .section {
   position: relative;
   opacity: 0; // initially invisible 
   bottom: 0 - $translation-distance; // initial position (down)
-  transition: opacity 5s ease, bottom $translation-speed;
+  transition: opacity 2s ease, bottom $translation-speed;
 
   &--is-visible {
     opacity: 1; // make it visible 
