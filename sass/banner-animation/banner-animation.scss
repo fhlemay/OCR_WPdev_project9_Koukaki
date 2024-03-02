@@ -23,6 +23,10 @@ $translation-distance: 200px;
     &--floating {
       animation: floating 8s infinite linear;
     }
+
+    &--sticky {
+      position: fixed !important;
+    }
   }
 }
 

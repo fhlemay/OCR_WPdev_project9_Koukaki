@@ -97,6 +97,9 @@ h2 span.is-visible {
 .banner__logo--floating {
   animation: floating 8s infinite linear;
 }
+.banner__logo--sticky {
+  position: fixed !important;
+}
 
 @keyframes floating {
   0%, 100% {
