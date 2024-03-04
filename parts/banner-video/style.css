@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.banner img {
+.banner__logo {
   position: absolute;
   z-index: 1;
 }
@@ -11,7 +11,7 @@
  * On n'affiche pas la vidéo si en version mobile  
  */
 @media all and (max-width: 1192px) {
-  #banner-video  {
-    display : none;
+  #banner-video {
+    display: none;
   }
 }

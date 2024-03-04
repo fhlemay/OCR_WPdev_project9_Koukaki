@@ -16,7 +16,6 @@ $translation-distance: 200px;
     transition: transform $translation-speed;
 
     &--slide-up {
-      // bottom: 0px;
       transform: translateY(0);
     }
 
@@ -29,7 +28,6 @@ $translation-distance: 200px;
     }
   }
 }
-
 
 @keyframes floating {
 
