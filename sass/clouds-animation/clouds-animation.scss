@@ -1,0 +1,28 @@
+.story {
+  #place {
+    position: relative;
+    background-image: url("./assets/images/image_place.png");
+  }
+
+  &__moving-clouds {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &::before {
+      position: absolute;
+      content: url("./assets/images/big_cloud.png");
+      filter: blur(10px);
+      top: 60px;
+      right: 100px;
+    }
+
+    &::after {
+      position: absolute;
+      content: url("./assets/images/little_cloud.png");
+      filter: blur(10px);
+      top: 250px;
+      right: 500px;
+    }
+  }
+}
