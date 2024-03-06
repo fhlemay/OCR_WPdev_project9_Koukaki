@@ -6,6 +6,7 @@ function theme_enqueue_styles()
   wp_enqueue_script('title-animation', get_stylesheet_directory_uri() . '/assets/js/title-animation.js');
   wp_enqueue_script('sections-animation', get_stylesheet_directory_uri() . '/assets/js/sections-animation.js');
   wp_enqueue_script('banner-animation', get_stylesheet_directory_uri() . '/assets/js/banner-animation.js');
+  wp_enqueue_script('clouds-animation', get_stylesheet_directory_uri() . '/assets/js/clouds-animation.js');
 }
 
 // Get customizer options form parent theme

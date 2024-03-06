@@ -141,6 +141,7 @@ h2 span.is-visible {
   position: absolute;
   right: 0;
   top: 0;
+  transition: transform 0.5s ease;
 }
 .story__moving-clouds::before {
   position: absolute;
