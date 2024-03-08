@@ -1,23 +1,24 @@
+/* ************************
+ * ** Client requirement **
+ * ************************
+ * When the page is loading, all sections except banner :
+ *  -will have a fade-in effect;
+ *  -will slide up at the same time, except text (<p>).
+ */
 document.addEventListener("DOMContentLoaded", () => {
-  let observerOptions = {
-    rootMargin: "0px",
-    threshold: 0.1,
-  };
+  const SECTION = "section";
+  const IS_VISIBLE = "section--is-visible";
+  const SLIDE_UP = "section--slide-up";
+  const TEXT = "section__text";
+  const TEXT_FIX = "section__text--slide-down";
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("section--is-visible", "section--slide-up");
-        entry.target
-          .querySelectorAll(".section__text")
-          // counter container animation to fix texts in place
-          .forEach((text) => text.classList.add("section__text--slide-down"));
-      }
-    });
-  }, observerOptions);
+  const allSections = document.querySelectorAll(`.${SECTION}`);
 
-  const allSections = document.querySelectorAll(".section");
   allSections.forEach((section) => {
-    observer.observe(section);
+    section.classList.add(SLIDE_UP);
+    section.classList.add(IS_VISIBLE);
+    section
+      .querySelectorAll(`.${TEXT}`)
+      .forEach((text) => text.classList.add(TEXT_FIX));
   });
 });

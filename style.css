@@ -60,8 +60,8 @@ h2 span.is-visible {
 .section {
   position: relative;
   opacity: 0;
-  bottom: -200px;
-  transition: opacity 2s ease, bottom 2s;
+  bottom: -300px;
+  transition: opacity 2s ease, bottom 1s;
 }
 .section--is-visible {
   opacity: 1;
@@ -71,8 +71,8 @@ h2 span.is-visible {
 }
 .section__text {
   position: relative;
-  bottom: 200px;
-  transition: bottom 2s;
+  bottom: 300px;
+  transition: bottom 1s;
 }
 .section__text--slide-down {
   bottom: 0px;
