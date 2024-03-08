@@ -1,7 +1,7 @@
 h2 {
   span {
     display: inline-block; // to be able to move it around
-    transform: translateY(125%); // I don't want to see you : move under the bottom  
+    transform: translateY(125%); // I don't want to see you : move under the bottom
     transition: opacity 2.5s ease, transform 0.7s ease;
 
     &.is-visible {

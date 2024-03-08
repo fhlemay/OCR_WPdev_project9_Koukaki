@@ -1,33 +1,50 @@
+/* ************************
+ * ** Client requirement **
+ * ************************
+ * When the section appears in viewport on scrolling :
+ *  -section title will slide up;
+ *  -each words in the title will have a small delay.
+ */
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("h2").forEach((element) => {
-    // Splits the text into words and wraps them in a span container.
+  const TITLE = "h2";
+  const TO_ANIMATE = "is-visible";
+  const WORD_ANIMATION_DELAY = 150; // units : ms
+  const WORD_CONTAINER = "span";
+
+  const titles = document.querySelectorAll(TITLE);
+
+  titles.forEach((title) => {
+    splitWordsIn(title);
+    doOnElementWhenItsVisible(animateWordsIn, title);
+  });
+
+  function splitWordsIn(element) {
     element.innerHTML = element.textContent
       .split(" ")
-      .map((word) => `<span>${word}</span>`)
+      .map((word) => `<${WORD_CONTAINER}>${word}</${WORD_CONTAINER}>`)
       .join(" ");
+  }
 
-    const words = element.querySelectorAll("span");
-
-    let observerOptions = {
+  function doOnElementWhenItsVisible(doOn, element) {
+    const observerOptions = {
       rootMargin: "0px",
       threshold: 1.0,
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            words.forEach((word, index) => {
-              setTimeout(() => {
-                word.classList.add("is-visible");
-              }, index * 150); // animation delay between words
-            });
-          }, 2000); // give time to the section's animation
-          observer.disconnect(); // stop observing once animation is triggered
-        }
-      });
-    }, observerOptions);
+    new IntersectionObserver((entries, observer) => {
+      if (entries[0].isIntersecting) {
+        doOn(element);
+        observer.disconnect(); // stop observing once done
+      }
+    }, observerOptions).observe(element);
+  }
 
-    observer.observe(element); // observe each element (h2)
-  });
+  function animateWordsIn(element) {
+    const words = element.querySelectorAll(WORD_CONTAINER);
+    words.forEach((word, index) => {
+      setTimeout(() => {
+        word.classList.add(TO_ANIMATE);
+      }, index * WORD_ANIMATION_DELAY); // animation delay between words
+    });
+  }
 });
