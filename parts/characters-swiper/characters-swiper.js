@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    loop: true,
+    // loop: true,
     coverflowEffect: {
       rotate: 50,
       stretch: 0,
