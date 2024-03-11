@@ -6,10 +6,9 @@ get_header();
 <main id="primary" class="site-main">
   <section class="banner">
     <?php get_template_part('parts/banner-video/banner-video'); ?>
-    <img class="banner__logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
-      alt="logo Fleurs d'oranger & chats errants">
+    <img class="banner__logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
   </section>
-  <section id="#story" class="story section">
+  <section class="story section">
     <h2 class="story__title">L'histoire</h2>
     <article id="" class="story__article">
       <p class="section__text">
