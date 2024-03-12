@@ -1,3 +1,6 @@
+$child-images-folder: "./assets/images/";
+$parent-images-folder: "../foce/assets/images/";
+
 .main-navigation {
 
   &__header {
@@ -34,6 +37,70 @@
         text-shadow: 0px 0px 10px #FF5C00;
       }
     }
+
+    li:nth-child(1)::before {
+      content: url($parent-images-folder + "orchid.png");
+      position: absolute;
+      left: -4.2rem;
+      top: 4.2rem;
+    }
+
+    li:nth-child(1)::after {
+      content: url($parent-images-folder + "Sunflower.png");
+      position: absolute;
+      right: 15rem;
+      top: 8rem;
+    }
+
+    li:nth-child(2)::before {
+      content: url($child-images-folder + "cat_blue.png");
+      position: absolute;
+      left: 18rem;
+      top: 15rem;
+    }
+
+    li:nth-child(2)::after {
+      content: "";
+      background: url($parent-images-folder + "random_flower.png") no-repeat center center;
+      width: 100px;
+      height: 100px;
+      background-size: 100% auto;
+      position: absolute;
+      right: -3rem;
+      top: 24rem;
+    }
+
+    li:nth-child(3)::before {
+      content: "";
+      background: url($parent-images-folder + "flower.png") no-repeat center center;
+      width: 70px;
+      height: 70px;
+      background-size: 100% auto;
+      position: absolute;
+      left: 13rem;
+      top: 34rem;
+    }
+
+    li:nth-child(3):after {
+      content: url($child-images-folder + "cat_black.png");
+      position: absolute;
+      right: 18rem;
+      top: 33rem;
+    }
+
+    li:nth-child(4):before {
+      content: url($child-images-folder + "cat_yellow.png");
+      position: absolute;
+      left: 10rem;
+      top: 46rem;
+    }
+
+    li:nth-child(4)::after {
+      content: url($parent-images-folder + "hibiscus_footer.png");
+      position: absolute;
+      right: -23rem;
+      bottom: -25rem;
+    }
   }
 }
 
@@ -60,67 +127,4 @@
     opacity: 1;
   }
 
-  #decoration1::before {
-    content: url("../foce/assets/images/orchid.png");
-    position: absolute;
-    left: -4.2rem;
-    top: 4.2rem;
-  }
-
-  #decoration1::after {
-    content: url("../foce/assets/images/Sunflower.png");
-    position: absolute;
-    right: 15rem;
-    top: 8rem;
-  }
-
-  #decoration2::before {
-    content: url("./assets/images/cat_blue.png");
-    position: absolute;
-    left: 18rem;
-    top: 15rem;
-  }
-
-  #decoration2::after {
-    content: "";
-    background: url("../foce/assets/images/random_flower.png") no-repeat center center;
-    width: 100px;
-    height: 100px;
-    background-size: 100% auto;
-    position: absolute;
-    right: -3rem;
-    top: 24rem;
-  }
-
-  #decoration3::before {
-    content: "";
-    background: url("../foce/assets/images/flower.png") no-repeat center center;
-    width: 70px;
-    height: 70px;
-    background-size: 100% auto;
-    position: absolute;
-    left: 13rem;
-    top: 34rem;
-  }
-
-  #decoration3:after {
-    content: url("./assets/images/cat_black.png");
-    position: absolute;
-    right: 18rem;
-    top: 33rem;
-  }
-
-  #decoration4:before {
-    content: url("./assets/images/cat_yellow.png");
-    position: absolute;
-    left: 10rem;
-    top: 46rem;
-  }
-
-  #decoration4::after {
-    content: url("../foce/assets/images/hibiscus_footer.png");
-    position: absolute;
-    right: -23rem;
-    bottom: -25rem;
-  }
 }
