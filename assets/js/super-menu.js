@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const MINI_DELAY = 50; // to avoid the simultaneity of operations
-  const ANIM_DELAY = 1000 + MINI_DELAY; // must be higher than in css
+  const ANIM_DELAY = 500 + MINI_DELAY; // must be higher than in css
 
   // childThemeParams is given by WP when this script is loaded.
   // See child theme functions.php.

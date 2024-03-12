@@ -167,6 +167,8 @@ h2 span.is-visible {
 .main-navigation__header #toggle-super-menu {
   position: absolute;
   right: 10%;
+  padding: 15px;
+  cursor: pointer;
 }
 .main-navigation__header #toggle-super-menu:hover {
   filter: drop-shadow(0px 0px 3px #FF5C00);
@@ -186,7 +188,7 @@ h2 span.is-visible {
 .super-menu {
   display: flex;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
   position: relative;
   background-color: #FFF5E9;
   flex-direction: column;
@@ -195,7 +197,6 @@ h2 span.is-visible {
   padding-bottom: 40px;
   padding-top: 40px;
   height: 88vh;
-  border: 1px solid grey;
   overflow: hidden;
 }
 .super-menu__logo {
