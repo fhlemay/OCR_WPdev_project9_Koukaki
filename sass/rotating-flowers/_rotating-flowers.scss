@@ -1,7 +1,8 @@
 @keyframes rotate {
   from {
-    transform: rotate(0deg);  
+    transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -13,7 +14,7 @@
 }
 
 .story {
-  h2{
+  h2 {
     &::after {
       @include rotate-flower();
     }
@@ -23,14 +24,15 @@
     &::after {
       @include rotate-flower();
     }
-  } 
+  }
 }
 
 #studio {
-  h2{
+  h2 {
     &::before {
       @include rotate-flower();
     }
+
     &::after {
       @include rotate-flower();
     }
@@ -38,14 +40,19 @@
 }
 
 .site-footer {
-    display: block;
-    &::before {
-      @include rotate-flower();
-    }
+  display: block;
 
-    &::after {
-      bottom: initial;
-      top: 0; 
-      @include rotate-flower();
-  } 
+  &::before {
+    @include rotate-flower();
+  }
+
+  &::after {
+    bottom: initial;
+    top: 0;
+    @include rotate-flower();
+  }
+
+  ul::after {
+    @include rotate-flower();
+  }
 }
