@@ -8,6 +8,10 @@ function theme_enqueue_styles()
   wp_enqueue_script('banner-animation', get_stylesheet_directory_uri() . '/assets/js/banner-animation.js');
   wp_enqueue_script('clouds-animation', get_stylesheet_directory_uri() . '/assets/js/clouds-animation.js');
   wp_enqueue_script('super-menu', get_stylesheet_directory_uri() . '/assets/js/super-menu.js');
+  // pass PHP variable(s) to JS :
+  wp_localize_script('super-menu', 'childThemeParams', array(
+    'themeUrl' => get_stylesheet_directory_uri(), // Other parameters as needed
+  ));
 }
 
 // Get customizer options form parent theme

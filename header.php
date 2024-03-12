@@ -40,8 +40,8 @@
           <div class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
               <?php bloginfo('name'); ?>
             </a></div>
-          <img id="toggle-super-menu" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/burger.png'; ?> "
-            alt="burger">
+          <img id="toggle-super-menu"
+            src="<?php echo get_stylesheet_directory_uri() . '/assets/images/menu_open.png'; ?> " alt="burger">
         </div>
         <div class="super-menu">
           <img class="super-menu__logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png' ;

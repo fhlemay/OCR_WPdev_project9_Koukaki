@@ -182,11 +182,11 @@ h2 span.is-visible {
   display: block;
   font-size: 50px;
 }
-.main-navigation .super-menu {
+
+.super-menu {
   display: flex;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s, visibility 1s;
+  transition: opacity 1s;
   position: relative;
   background-color: #FFF5E9;
   flex-direction: column;
@@ -198,33 +198,32 @@ h2 span.is-visible {
   border: 1px solid grey;
   overflow: hidden;
 }
-.main-navigation .super-menu__logo {
+.super-menu__logo {
   width: 154px;
   filter: drop-shadow(0px 0px 10px #FF5C00);
 }
-.main-navigation .super-menu.is-visible {
+.super-menu.is-visible {
   opacity: 1;
-  visibility: visible;
 }
-.main-navigation .super-menu #story::before {
+.super-menu #story::before {
   content: url("../foce/assets/images/orchid.png");
   position: absolute;
   left: -4.2rem;
   top: 4.2rem;
 }
-.main-navigation .super-menu #story::after {
+.super-menu #story::after {
   content: url("../foce/assets/images/Sunflower.png");
   position: absolute;
   right: 15rem;
   top: 8rem;
 }
-.main-navigation .super-menu #characters::before {
+.super-menu #characters::before {
   content: url("./assets/images/cat_blue.png");
   position: absolute;
   left: 18rem;
   top: 15rem;
 }
-.main-navigation .super-menu #characters::after {
+.super-menu #characters::after {
   content: "";
   background: url("../foce/assets/images/random_flower.png") no-repeat center center;
   width: 100px;
@@ -234,7 +233,7 @@ h2 span.is-visible {
   right: -3rem;
   top: 24rem;
 }
-.main-navigation .super-menu #place::before {
+.super-menu #place::before {
   content: "";
   background: url("../foce/assets/images/flower.png") no-repeat center center;
   width: 70px;
@@ -244,19 +243,19 @@ h2 span.is-visible {
   left: 13rem;
   top: 34rem;
 }
-.main-navigation .super-menu #place:after {
+.super-menu #place:after {
   content: url("./assets/images/cat_black.png");
   position: absolute;
   right: 18rem;
   top: 33rem;
 }
-.main-navigation .super-menu #koukaki:before {
+.super-menu #koukaki:before {
   content: url("./assets/images/cat_yellow.png");
   position: absolute;
   left: 10rem;
   top: 46rem;
 }
-.main-navigation .super-menu #koukaki::after {
+.super-menu #koukaki::after {
   content: url("../foce/assets/images/hibiscus_footer.png");
   position: absolute;
   right: -23rem;
