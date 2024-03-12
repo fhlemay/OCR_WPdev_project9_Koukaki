@@ -56,6 +56,10 @@ h2 span.is-visible {
   line-height: 0;
   animation: rotate 20s infinite linear;
 }
+.site-footer ul::after {
+  line-height: 0;
+  animation: rotate 20s infinite linear;
+}
 
 .section {
   position: relative;
@@ -158,6 +162,14 @@ h2 span.is-visible {
   right: 500px;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .main-navigation__header {
   height: 100%;
   display: flex;
@@ -187,17 +199,31 @@ h2 span.is-visible {
 .main-navigation ul li a:hover {
   text-shadow: 0px 0px 10px #FF5C00;
 }
+.main-navigation ul li a span {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(125%);
+  transition: transform 0.7s ease;
+}
+.main-navigation ul li a span.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .main-navigation ul li:nth-child(1)::before {
   content: url("../foce/assets/images/orchid.png");
   position: absolute;
   left: -4.2rem;
   top: 4.2rem;
+  line-height: 0;
+  animation: rotate 20s infinite linear;
 }
 .main-navigation ul li:nth-child(1)::after {
   content: url("../foce/assets/images/Sunflower.png");
   position: absolute;
   right: 15rem;
   top: 8rem;
+  line-height: 0;
+  animation: rotate 20s infinite linear;
 }
 .main-navigation ul li:nth-child(2)::before {
   content: url("./assets/images/cat_blue.png");
@@ -214,6 +240,8 @@ h2 span.is-visible {
   position: absolute;
   right: -3rem;
   top: 24rem;
+  line-height: 0;
+  animation: rotate 20s infinite linear;
 }
 .main-navigation ul li:nth-child(3)::before {
   content: "";
@@ -224,6 +252,8 @@ h2 span.is-visible {
   position: absolute;
   left: 13rem;
   top: 34rem;
+  line-height: 0;
+  animation: rotate 20s infinite linear;
 }
 .main-navigation ul li:nth-child(3):after {
   content: url("./assets/images/cat_black.png");
@@ -242,6 +272,8 @@ h2 span.is-visible {
   position: absolute;
   right: -23rem;
   bottom: -25rem;
+  line-height: 0;
+  animation: rotate 20s infinite linear;
 }
 
 .super-menu {

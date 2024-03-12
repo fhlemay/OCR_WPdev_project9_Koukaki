@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const superMenu = document.querySelector(".super-menu");
   const superMenuLinks = superMenu.querySelectorAll("a");
 
-  // Initial state : super menu is closed
+  // Initial state : menu is closed
   superMenu.style.display = "none";
   superMenu.classList.remove("is-visible");
   toggleButton.src = OPEN_MENU_IMAGE;
@@ -23,41 +23,42 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleSuperMenu("CLOSE");
     } else {
       toggleSuperMenu("OPEN");
-      // doIfThingIsClicked(toggleSuperMenu("CLOSE"), superMenuLinks);
     }
   });
 
   superMenuLinks.forEach((link) => {
-    // link.addEventListener("click", toggleSuperMenu("CLOSE"));
     link.addEventListener("click", () => {
       toggleSuperMenu("CLOSE");
     });
   });
 
-  // const doIfThingIsClicked = (doThat, things) => {
-  //   things.forEach((thing) => {
-  //     thing.addEventListener("click", doThat);
-  //   });
-  // };
-
   function toggleSuperMenu(action) {
     switch (action) {
       case "OPEN":
-        console.log("opening super menu");
         superMenu.style.display = "flex";
         toggleButton.src = CLOSE_MENU_IMAGE;
+        superMenuLinks.forEach((link) => {
+          splitWordsIn(link); // see helper-functions.js
+        });
         setTimeout(() => {
           superMenu.classList.add("is-visible");
         }, MINI_DELAY);
+        superMenu.addEventListener("transitionend", animateLinks);
         break;
       case "CLOSE":
-        console.log("closing super menu");
         superMenu.classList.remove("is-visible");
         toggleButton.src = OPEN_MENU_IMAGE;
         setTimeout(() => {
           superMenu.style.display = "none";
         }, ANIM_DELAY);
         break;
+    }
+
+    function animateLinks() {
+      superMenuLinks.forEach((link) => {
+        animateWordsIn(link); // see helper-functions.js
+      });
+      superMenu.removeEventListener("transitionend", animateLinks);
     }
   }
 });
