@@ -209,25 +209,25 @@ h2 span.is-visible {
 .super-menu.is-visible {
   opacity: 1;
 }
-.super-menu #story::before {
+.super-menu #decoration1::before {
   content: url("../foce/assets/images/orchid.png");
   position: absolute;
   left: -4.2rem;
   top: 4.2rem;
 }
-.super-menu #story::after {
+.super-menu #decoration1::after {
   content: url("../foce/assets/images/Sunflower.png");
   position: absolute;
   right: 15rem;
   top: 8rem;
 }
-.super-menu #characters::before {
+.super-menu #decoration2::before {
   content: url("./assets/images/cat_blue.png");
   position: absolute;
   left: 18rem;
   top: 15rem;
 }
-.super-menu #characters::after {
+.super-menu #decoration2::after {
   content: "";
   background: url("../foce/assets/images/random_flower.png") no-repeat center center;
   width: 100px;
@@ -237,7 +237,7 @@ h2 span.is-visible {
   right: -3rem;
   top: 24rem;
 }
-.super-menu #place::before {
+.super-menu #decoration3::before {
   content: "";
   background: url("../foce/assets/images/flower.png") no-repeat center center;
   width: 70px;
@@ -247,19 +247,19 @@ h2 span.is-visible {
   left: 13rem;
   top: 34rem;
 }
-.super-menu #place:after {
+.super-menu #decoration3:after {
   content: url("./assets/images/cat_black.png");
   position: absolute;
   right: 18rem;
   top: 33rem;
 }
-.super-menu #koukaki:before {
+.super-menu #decoration4:before {
   content: url("./assets/images/cat_yellow.png");
   position: absolute;
   left: 10rem;
   top: 46rem;
 }
-.super-menu #koukaki::after {
+.super-menu #decoration4::after {
   content: url("../foce/assets/images/hibiscus_footer.png");
   position: absolute;
   right: -23rem;
