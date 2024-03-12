@@ -230,6 +230,7 @@ h2 span.is-visible {
   position: absolute;
   left: 18rem;
   top: 15rem;
+  animation: floating 8s infinite linear;
 }
 .main-navigation ul li:nth-child(2)::after {
   content: "";
@@ -260,12 +261,14 @@ h2 span.is-visible {
   position: absolute;
   right: 18rem;
   top: 33rem;
+  animation: floating 8s infinite linear;
 }
 .main-navigation ul li:nth-child(4):before {
   content: url("./assets/images/cat_yellow.png");
   position: absolute;
   left: 10rem;
   top: 46rem;
+  animation: floating 8s infinite linear;
 }
 .main-navigation ul li:nth-child(4)::after {
   content: url("../foce/assets/images/hibiscus_footer.png");
@@ -296,6 +299,39 @@ h2 span.is-visible {
 }
 .super-menu.is-visible {
   opacity: 1;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(10px, 5px);
+  }
+  20% {
+    transform: translate(-5px, 10px);
+  }
+  30% {
+    transform: translate(-10px, 5px);
+  }
+  40% {
+    transform: translate(-10px, -10px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  60% {
+    transform: translate(5px, -10px);
+  }
+  70% {
+    transform: translate(10px, -5px);
+  }
+  80% {
+    transform: translate(-5px, 0);
+  }
+  90% {
+    transform: translate(-10px, 5px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
