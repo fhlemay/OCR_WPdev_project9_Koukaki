@@ -29,8 +29,14 @@
       position: unset; // decoration placed relative to super menu
       display: block;
       font-size: 50px;
+
+      a:hover {
+        text-shadow: 0px 0px 10px #FF5C00;
+      }
     }
+
   }
+
 }
 
 .super-menu {

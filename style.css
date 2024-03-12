@@ -184,6 +184,9 @@ h2 span.is-visible {
   display: block;
   font-size: 50px;
 }
+.main-navigation ul li a:hover {
+  text-shadow: 0px 0px 10px #FF5C00;
+}
 
 .super-menu {
   display: flex;
