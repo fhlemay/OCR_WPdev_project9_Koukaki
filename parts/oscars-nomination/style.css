@@ -13,9 +13,16 @@
 
 #oscars-nomination h3 {
   background: url('./images/orange_oscars_nomination_bg.png');
+  background-repeat: no-repeat;
   font-size: 3rem;
   line-height: 3.786rem;
   text-align: left;
   padding: 4rem;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-} 
+}
+
+@media screen and (max-width: 1040px) {
+  #oscars-nomination {
+    flex-direction: column;
+  }
+}
