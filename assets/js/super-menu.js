@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const MINI_DELAY = 50; // to avoid the simultaneity of operations
+  const MINI_DELAY = 50;
   const ANIM_DELAY = 500 + MINI_DELAY; // must be higher than in css
 
   // childThemeParams is given by WP when this script is loaded.
@@ -42,8 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         setTimeout(() => {
           superMenu.classList.add("is-visible");
-        }, MINI_DELAY);
-        superMenu.addEventListener("transitionend", animateLinks);
+        }, MINI_DELAY); // to avoid the simultaneity of operations
+        setTimeout(() => {
+          superMenuLinks.forEach((link) => {
+            animateWordsIn(link); // see helper-functions.js
+          });
+        }, MINI_DELAY * 5); // delay manually adjusted
         break;
       case "CLOSE":
         superMenu.classList.remove("is-visible");
@@ -52,13 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
           superMenu.style.display = "none";
         }, ANIM_DELAY);
         break;
-    }
-
-    function animateLinks() {
-      superMenuLinks.forEach((link) => {
-        animateWordsIn(link); // see helper-functions.js
-      });
-      superMenu.removeEventListener("transitionend", animateLinks);
     }
   }
 });
