@@ -28,6 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   superMenuLinks.forEach((link) => {
     link.addEventListener("click", () => {
+      // Dirty trick to compensate the sticky main nav bar height (80px).
+      const targetId = link.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+      setTimeout(() => {
+        if (targetElement) {
+          window.scrollBy(0, -80);
+        }
+      }, 10); // give time to browser to jump to #href before applying menu offset
       toggleSuperMenu("CLOSE");
     });
   });
