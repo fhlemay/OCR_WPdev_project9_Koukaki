@@ -25,6 +25,10 @@ h2 span.is-visible {
     transform: rotate(360deg);
   }
 }
+main {
+  overflow: hidden;
+}
+
 .story h2::after {
   line-height: 0;
   animation: rotate 20s infinite linear;

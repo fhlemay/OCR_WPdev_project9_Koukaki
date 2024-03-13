@@ -13,6 +13,10 @@
   animation: rotate 20s infinite linear;
 }
 
+main {
+  overflow: hidden;
+}
+
 .story {
   h2 {
     &::after {
