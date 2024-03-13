@@ -8,6 +8,46 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes floating {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(10px, 5px);
+  }
+  20% {
+    transform: translate(-5px, 10px);
+  }
+  30% {
+    transform: translate(-10px, 5px);
+  }
+  40% {
+    transform: translate(-10px, -10px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  60% {
+    transform: translate(5px, -10px);
+  }
+  70% {
+    transform: translate(10px, -5px);
+  }
+  80% {
+    transform: translate(-5px, 0);
+  }
+  90% {
+    transform: translate(-10px, 5px);
+  }
+}
 h2 span {
   display: inline-block;
   transform: translateY(125%);
@@ -17,14 +57,6 @@ h2 span.is-visible {
   transform: translateY(0);
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 main {
   overflow: hidden;
 }
@@ -109,38 +141,6 @@ main {
   position: fixed !important;
 }
 
-@keyframes floating {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(10px, 5px);
-  }
-  20% {
-    transform: translate(-5px, 10px);
-  }
-  30% {
-    transform: translate(-10px, 5px);
-  }
-  40% {
-    transform: translate(-10px, -10px);
-  }
-  50% {
-    transform: translate(5px, -5px);
-  }
-  60% {
-    transform: translate(5px, -10px);
-  }
-  70% {
-    transform: translate(10px, -5px);
-  }
-  80% {
-    transform: translate(-5px, 0);
-  }
-  90% {
-    transform: translate(-10px, 5px);
-  }
-}
 .story #place {
   position: relative;
   background-image: url("./assets/images/image_place.png");
@@ -166,14 +166,6 @@ main {
   right: 500px;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .main-navigation__header {
   height: 100%;
   display: flex;
@@ -303,39 +295,6 @@ main {
 }
 .super-menu.is-visible {
   opacity: 1;
-}
-
-@keyframes floating {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(10px, 5px);
-  }
-  20% {
-    transform: translate(-5px, 10px);
-  }
-  30% {
-    transform: translate(-10px, 5px);
-  }
-  40% {
-    transform: translate(-10px, -10px);
-  }
-  50% {
-    transform: translate(5px, -5px);
-  }
-  60% {
-    transform: translate(5px, -10px);
-  }
-  70% {
-    transform: translate(10px, -5px);
-  }
-  80% {
-    transform: translate(-5px, 0);
-  }
-  90% {
-    transform: translate(-10px, 5px);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
