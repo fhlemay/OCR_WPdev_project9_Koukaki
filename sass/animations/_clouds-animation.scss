@@ -27,3 +27,11 @@
     }
   }
 }
+
+@media screen and (max-width: 1192px) {
+
+  .story__moving-clouds::before,
+  .story__moving-clouds::after {
+    content: none;
+  }
+}
