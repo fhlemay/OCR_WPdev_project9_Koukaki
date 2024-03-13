@@ -266,7 +266,7 @@ main {
   top: 46rem;
   animation: floating 8s infinite linear;
 }
-.main-navigation ul li:nth-child(4)::after {
+.main-navigation ul li:nth-child(4):after {
   content: url("../foce/assets/images/hibiscus_footer.png");
   position: absolute;
   right: -23rem;
@@ -295,6 +295,29 @@ main {
 }
 .super-menu.is-visible {
   opacity: 1;
+}
+
+@media screen and (max-width: 1040px) {
+  .main-navigation ul li::before {
+    content: "" !important;
+    background: none !important;
+  }
+  .main-navigation ul li::after {
+    content: "" !important;
+    background: none !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .site-title > a {
+    display: none;
+  }
+  .main-navigation__header {
+    justify-content: center;
+  }
+  .main-navigation__header #toggle-super-menu {
+    position: relative;
+    right: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

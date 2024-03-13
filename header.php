@@ -31,29 +31,22 @@
 
     <header id="masthead" class="site-header">
       <nav id="site-navigation" class="main-navigation">
-        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
         <div class="main-navigation__header">
           <div class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
               <?php bloginfo('name'); ?>
             </a></div>
-          <img id="toggle-super-menu"
-            src="<?php echo get_stylesheet_directory_uri() . '/assets/images/menu_open.png'; ?> " alt="burger">
+          <img id="toggle-super-menu" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/menu_open.png'; ?> " alt="burger">
         </div>
         <div class="super-menu">
-          <img class="super-menu__logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png' ;
-            ?> "=alt="">
+          <img class="super-menu__logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png';
+                                              ?> "=alt="">
           <ul>
             <li><a href="#story">Histoire</a></li>
             <li><a href="#characters">Personnages</a></li>
             <li><a href="#place">Lieu</a></li>
             <li><a href="#studio">Studio Koukaki</a></li>
           </ul>
-          <img class="super-menu__footer"
-            src="<?php echo get_stylesheet_directory_uri() . '/assets/images/main-navigation-footer.png'; ?> " alt="">
+          <img class="super-menu__footer" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/main-navigation-footer.png'; ?> " alt="">
         </div>
 
 
